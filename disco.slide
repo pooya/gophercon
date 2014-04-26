@@ -1,0 +1,118 @@
+Go Workers for Disco Project
+(discoproject.org)
+
+Shayan Pooya
+Software Developer At Chango
+@shayanpooya
+http://github.com/pooya
+
+
+* 
+.image splash/disco.jpg
+
+* Disco Project
+
+- A Map/Reduce framework for distributed computing
+
+- Massive data - Minimal code
+
+- Actually a big-data platform with support for pipelines
+
+- Started in Nokia Research in 2008
+
+.image splash/commit.png
+
+* Disco Project (cont.)
+The control-plane in Erlang
+
+The data-plane in Python
+
+.image splash/languages.jpg
+
+.image splash/disco-main.png 500 1000
+
+* Disco Features
+
+- Easy to start with
+
+- Small code base
+
+- Deployed in production for many years in different environments.
+
+- Stable and backwards compatible
+
+- Under active development
+
+- Integrates with HDFS and Redis
+
+- Active Ecosystem
+.link https://github.com/chango/hustle
+
+* Disco Sample Code
+
+.image splash/python_code.png 590 1000
+
+* Workers
+
+- The data-plane
+
+- The processes that actually do the work
+
+- Control-Plane (Erlang) and Data-Plane (Python) are decoupled
+
+- We can have different types of workers ... 
+
+* Workers
+
+Currently, three workers are available for Disco:
+
+- Python default worker that ships with the project.
+
+- OCaml worker also available
+
+- Java worker also available
+
+And two are under way:
+
+- Golang worker is in progress
+
+- Haskell worker in GSoC this year
+
+* Golang
+
+.image splash/gopher.png 100 100
+
+- Easy
+
+- Simple
+
+- Fast
+
+- Interfaces
+
+- Fast Compilation
+
+* The Golang Worker
+
+Work in progress
+
+.code code/map.go
+
+* The Golang Worker
+.code code/reduce.go
+
+* The Golang Worker
+.code code/main.go
+
+
+$ go get github.com/discoproject/goworker/jobpack
+$ jobpack -W count_words.go -I http://discoproject.org/media/text/chekhov.txt
+
+.link http://github.com/discoproject/goworker
+
+* Resources
+
+- http://discoproject.org
+- http://github.com/discoproject/goworker
+- http://github.com/discoproject/disco
+- https://github.com/chango/hustle
